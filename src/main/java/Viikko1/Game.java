@@ -1,5 +1,7 @@
 package Viikko1;
 
+import java.util.Random;
+
 public class Game {
 
     public Map createMap(String type, int width, int height) {
@@ -14,8 +16,11 @@ public class Game {
 
     public static void main(String[] args) {
         Game game = new Game();
+        Random rand = new Random();
+        int width = rand.nextInt(10);
+        int height = rand.nextInt(10);
 
-        Map cityMap = game.createMap("city", 5, 5);
+        Map cityMap = game.createMap("city", width, height);
         System.out.println("City Map:\n");
         cityMap.display();
 
