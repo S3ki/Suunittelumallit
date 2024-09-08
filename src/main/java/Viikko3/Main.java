@@ -2,7 +2,7 @@ package Viikko3;
 
 public class Main {
     public static void main(String[] args) {
-        UIFactory factory = new AFactory(); // tai uusi BFactory();
+        gUIFactory factory = new AFactory(); // tai uusi BFactory();
 
         Button button = factory.createButton("OK");
         TextField textField = factory.createTextField("Kirjoita tähän");

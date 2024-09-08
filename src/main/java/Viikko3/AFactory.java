@@ -1,6 +1,6 @@
 package Viikko3;
 
-public class AFactory extends UIFactory {
+public class AFactory extends gUIFactory{
     @Override
     public Button createButton(String text) {
         return new ButtonA(text);
