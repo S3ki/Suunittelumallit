@@ -5,6 +5,8 @@ import java.io.FileWriter;
 public class Logger {
 
     private static Logger instance;
+
+    // Tein FileWriterilla, koska se on nopeampi tässä tapauksessa kuin BufferedWriter.
     private FileWriter fw ;
 
     private Logger() {
