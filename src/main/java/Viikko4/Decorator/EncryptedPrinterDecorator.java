@@ -11,13 +11,14 @@ public class EncryptedPrinterDecorator extends PrinterDecorator {
         super(printer);
     }
 
+    @Override
     public void print(String text) {
         String encoded = enc.encodeToString(text.getBytes());
         System.out.println("encrypted value is: " + encoded);
 
         String decoded = new String(dec.decode(encoded));
         System.out.println("decrypted value is: " + decoded);
-        super.print(text);
+        printer.print(encoded);
 
     }
 
