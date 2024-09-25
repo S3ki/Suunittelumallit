@@ -9,6 +9,7 @@ public class NoviceState extends State {
     public void action() {
         String[] options = {"Train"};
         if (this.getCharacter().getExperience() > 80) {
+            System.out.println("Novice " + character.getName() + " has reached the intermediate level!");
             this.getCharacter().setState(new IntermediateState(this.getCharacter()));
         } else {
             switch (this.getCharacter().readUserChoice(options)) {
