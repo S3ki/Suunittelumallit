@@ -50,9 +50,10 @@ public class Controller {
     public void undo() {
         if (!history.isEmpty()) {
             System.out.println("Memento found in history");
+            IMemento currentState = history.get(history.size() - 1);
             IMemento previousState = history.remove(history.size() - 1);
             model.restoreState(previousState);
-            redoHistory.add(previousState);
+            redoHistory.add(currentState);
             gui.updateGui();
         }
     }
