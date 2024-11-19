@@ -18,7 +18,7 @@ public class Game extends Application {
         for (int y = 0; y < 20; y++) {
             for (int x = 0; x < 20; x++) {
                 String terrainType = (Math.random() > 0.5) ? "Water" : "Forest";
-                String imagePath = terrainType.equals("Water") ? "/graphics/water.png" : "/graphics/forest.png";
+                String imagePath = terrainType.equals("Water") ? "/resource/water.png" : "/resources/forest.png";
                 Tile tile = new Tile(factory.getTileGraphic(terrainType, imagePath), x, y);
                 map.addTile(tile);
             }
