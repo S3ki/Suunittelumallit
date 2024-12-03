@@ -11,8 +11,11 @@ public class Main {
         sciFiRecommendation.addBook(new Book("Dune", "Frank Herbert", "Science Fiction", 1965));
         sciFiRecommendation.addBook(new Book("Neuromancer", "William Gibson", "Cyberpunk", 1984));
 
+        Recommendation horrorRecommendation = new Recommendation("Horror Fans");
+        horrorRecommendation.addBook(new Book("The Shining", "Stephen King", "Horror", 1977));
+
         System.out.println("Welcome to the Book Recommendation System!");
-        Recommendation currentRecommendation = sciFiRecommendation;
+        Recommendation currentRecommendation = horrorRecommendation;
 
         while (true) {
             System.out.println("\nCurrent Recommendation:\n" + currentRecommendation);
