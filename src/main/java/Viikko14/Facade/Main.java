@@ -8,7 +8,7 @@ public class Main {
 
         try {
             String joke = facadeAPI.getAttributeValueFromJson("https://api.chucknorris.io/jokes/random", "value");
-            System.out.println("Random Chuck Norris Joke: " + joke);
+            System.out.println("Random Joke: " + joke);
         } catch (Exception e) {
             System.err.println("Error fetching Chuck Norris joke: " + e.getMessage());
         }
